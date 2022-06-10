@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 
 void main() {
   return runApp(
@@ -73,23 +74,85 @@ class _LoginPageState extends State<LoginPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Card(
-          elevation: 5.0,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-          color: Color(0xFF39173F),
-          child: Row(
-            children: [
-              Image.asset('images/teacher.png'),
-              SizedBox(
-                width: 10,
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              child: Container(
+                width: 274.0,
+                height: 171.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  color: Color(0xFF39173F),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset(
+                        'images/teacher.png',
+                        height: 100.0,
+                        width: 106.0,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Teacher',
+                      style: TextStyle(
+                          fontFamily: 'Cardo',
+                          fontSize: 30.0,
+                          color: Colors.white),
+                    )
+                  ],
+                ),
               ),
-              Text(
-                'Teacher',
-                style: TextStyle(
-                    fontFamily: 'Cardo', fontSize: 20.0, color: Colors.white),
-              )
-            ],
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Login()),
+                );
+              },
+            ),
+          ),
+        ),
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              child: Container(
+                width: 274.0,
+                height: 171.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  color: Color(0xFF39173F),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset(
+                        'images/student.png',
+                        height: 100.0,
+                        width: 106.0,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Student',
+                      style: TextStyle(
+                          fontFamily: 'Cardo',
+                          fontSize: 30.0,
+                          color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+              onTap: () {},
+            ),
           ),
         ),
       ],
