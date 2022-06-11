@@ -65,13 +65,15 @@ class _LoginPageState extends State<LoginPage> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Text(
-          "Log In as",
-          style: TextStyle(
-            fontFamily: 'Cardo',
-            color: Colors.black,
-            fontSize: 40.0,
-            fontWeight: FontWeight.bold,
+        Center(
+          child: Text(
+            "Log In as",
+            style: TextStyle(
+              fontFamily: 'Cardo',
+              color: Colors.black,
+              fontSize: 40.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         Center(
