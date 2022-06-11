@@ -67,194 +67,196 @@ class _SigninState extends State<Signin> {
   bool value = false;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        SizedBox(
-          height: 50,
-        ),
-        Center(
-          child: Text(
-            "Sign In",
-            style: TextStyle(
-              fontFamily: 'Cardo',
-              color: Colors.black,
-              fontSize: 40.0,
-              fontWeight: FontWeight.bold,
-            ),
+    return SingleChildScrollView(
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          SizedBox(
+            height: 50,
           ),
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 208.0),
-          child: Text(
-            "Username:",
-            style: TextStyle(
-              fontFamily: 'Cardo',
-              color: Colors.black,
-              fontSize: 25.0,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Container(
-          width: 340.0,
-          height: 50.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5.0),
-            color: Colors.white,
-          ),
-          child: Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.email_outlined),
-                tooltip: 'Username Icon',
+          Center(
+            child: Text(
+              "Sign In",
+              style: TextStyle(
+                fontFamily: 'Cardo',
                 color: Colors.black,
-                iconSize: 28,
-                onPressed: () {},
+                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
               ),
-              SizedBox(
-                width: 5,
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 208.0),
+            child: Text(
+              "Username:",
+              style: TextStyle(
+                fontFamily: 'Cardo',
+                color: Colors.black,
+                fontSize: 25.0,
               ),
-              Container(
-                height: 50.0,
-                width: 200.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Container(
+            width: 340.0,
+            height: 50.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5.0),
+              color: Colors.white,
+            ),
+            child: Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.email_outlined),
+                  tooltip: 'Username Icon',
+                  color: Colors.black,
+                  iconSize: 28,
+                  onPressed: () {},
                 ),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Enter Your Username',
-                    alignLabelWithHint: true,
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  height: 50.0,
+                  width: 200.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Enter Your Username',
+                      alignLabelWithHint: true,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 208.0),
-          child: Text(
-            "Password:",
-            style: TextStyle(
-              fontFamily: 'Cardo',
-              color: Colors.black,
-              fontSize: 25.0,
+              ],
             ),
           ),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        Container(
-          height: 50.0,
-          width: 340.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5.0),
-            color: Colors.white,
+          SizedBox(
+            height: 20,
           ),
-          child: TextFormField(
-            obscureText: hidePassword,
-            decoration: InputDecoration(
-              hintText: 'Enter Your Password',
-              prefixIcon: Icon(
-                Icons.lock_outlined,
+          Padding(
+            padding: const EdgeInsets.only(right: 208.0),
+            child: Text(
+              "Password:",
+              style: TextStyle(
+                fontFamily: 'Cardo',
                 color: Colors.black,
-              ),
-              suffixIcon: IconButton(
-                icon: hidePassword
-                    ? Icon(Icons.visibility_off)
-                    : Icon(Icons.visibility),
-                onPressed: () {
-                  setState(() {
-                    hidePassword = !hidePassword;
-                  });
-                },
+                fontSize: 25.0,
               ),
             ),
           ),
-        ),
-        SizedBox(
-          height: 2,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 190.0),
-          child: Text(
-            "Forgot Password?",
-            style: TextStyle(
-              fontFamily: 'Cardo',
-              color: Colors.black,
-              fontSize: 20.0,
-            ),
-            textAlign: TextAlign.right,
+          SizedBox(
+            height: 5,
           ),
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 30.0),
-              child: Checkbox(
-                activeColor: Colors.white,
-                checkColor: Colors.black,
-                value: this.value,
-                onChanged: (value) {
-                  setState(() {
-                    this.value = value!;
-                  });
-                },
+          Container(
+            height: 50.0,
+            width: 340.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5.0),
+              color: Colors.white,
+            ),
+            child: TextFormField(
+              obscureText: hidePassword,
+              decoration: InputDecoration(
+                hintText: 'Enter Your Password',
+                prefixIcon: Icon(
+                  Icons.lock_outlined,
+                  color: Colors.black,
+                ),
+                suffixIcon: IconButton(
+                  icon: hidePassword
+                      ? Icon(Icons.visibility_off)
+                      : Icon(Icons.visibility),
+                  onPressed: () {
+                    setState(() {
+                      hidePassword = !hidePassword;
+                    });
+                  },
+                ),
               ),
             ),
-            SizedBox(
-              width: 1,
-            ),
-            Text(
-              "Remember me",
+          ),
+          SizedBox(
+            height: 2,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 190.0),
+            child: Text(
+              "Forgot Password?",
               style: TextStyle(
                 fontFamily: 'Cardo',
                 color: Colors.black,
                 fontSize: 20.0,
               ),
-            )
-          ],
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Container(
-          width: 134.0,
-          height: 50.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20.0),
-            color: Color(0xFF39173F),
-          ),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Color(0xFF39173F),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
+              textAlign: TextAlign.right,
             ),
-            onPressed: null,
-            child: Text(
-              'Login',
-              style: TextStyle(
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 30.0),
+                child: Checkbox(
+                  activeColor: Colors.white,
+                  checkColor: Colors.black,
+                  value: this.value,
+                  onChanged: (value) {
+                    setState(() {
+                      this.value = value!;
+                    });
+                  },
+                ),
+              ),
+              SizedBox(
+                width: 1,
+              ),
+              Text(
+                "Remember me",
+                style: TextStyle(
                   fontFamily: 'Cardo',
-                  fontSize: 30.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+                  color: Colors.black,
+                  fontSize: 20.0,
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: 134.0,
+            height: 50.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0),
+              color: Color(0xFF39173F),
+            ),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF39173F),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
+              ),
+              onPressed: null,
+              child: Text(
+                'Login',
+                style: TextStyle(
+                    fontFamily: 'Cardo',
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
