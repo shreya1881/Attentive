@@ -1,7 +1,7 @@
 import 'dart:ui';
 
+import 'package:attentive/teachers_screen_3.dart';
 import 'package:flutter/material.dart';
-import 'package:passwordfield/passwordfield.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -244,7 +244,14 @@ class _SigninState extends State<Signin> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
               ),
-              onPressed: null,
+              onPressed: () {
+                setState(() {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TeachersScreen()));
+                });
+              },
               child: Text(
                 'Login',
                 style: TextStyle(

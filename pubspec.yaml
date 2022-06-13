@@ -62,8 +62,8 @@ flutter:
   assets:
      - images/teacher.png
      - images/student.png
-     - images/icons8-attendance-30.png
-     - images/attendance-mark.png
+     - images/attendancemark.png
+     - images/viewattendance.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
