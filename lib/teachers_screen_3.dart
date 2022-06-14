@@ -1,18 +1,56 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(
-    MaterialApp(
+class Teacher_screen extends StatelessWidget {
+  const Teacher_screen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Color(0xFFC378FE),
         appBar: AppBar(
-          title: const Center(child: Text('ATTENTIVE')),
+          title: Text(
+            'ATTENTIVE',
+            style: TextStyle(
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 4.0,
+                fontFamily: 'Comfortaa',
+                color: Colors.white),
+          ),
+          centerTitle: true,
           backgroundColor: Color(0xFF50177C),
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                  size: 38, // Changing Drawer Icon Size
+                ),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+              );
+            },
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.info_rounded),
+              tooltip: 'Info Icon',
+              color: Colors.white,
+              iconSize: 38,
+              onPressed: () {},
+            ),
+          ], //
         ),
         body: TeachersScreen(),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class TeachersScreen extends StatelessWidget {
@@ -20,24 +58,33 @@ class TeachersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Teacher",
-            style: TextStyle(
-              fontFamily: 'Cardo',
-              fontSize: 40.0,
+          SizedBox(
+            height: 50,
+          ),
+          Center(
+            child: Text(
+              "Teacher",
+              style: TextStyle(
+                fontFamily: 'Cardo',
+                fontSize: 40.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+          ),
+          SizedBox(
+            height: 30,
           ),
           Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: InkWell(
                 child: Container(
-                  width: 274.0,
+                  width: 275.0,
                   height: 171.0,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(20.0),
                     color: Color(0xFF39173F),
                   ),
                   child: Row(
@@ -51,19 +98,33 @@ class TeachersScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
-                      Text(
-                        'Take Attendance',
-                        style: TextStyle(
-                          fontFamily: 'Cardo',
-                          fontSize: 27.0,
-                          color: Colors.white,
-                        ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Take',
+                            style: TextStyle(
+                              fontFamily: 'Cardo',
+                              fontSize: 27.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Attendance',
+                            style: TextStyle(
+                              fontFamily: 'Cardo',
+                              fontSize: 27.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
                 ),
+                onTap: () {},
               ),
             ),
           ),
@@ -72,10 +133,10 @@ class TeachersScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: InkWell(
                 child: Container(
-                  width: 274.0,
+                  width: 275.0,
                   height: 171.0,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(20.0),
                     color: Color(0xFF39173F),
                   ),
                   child: Row(
@@ -84,20 +145,33 @@ class TeachersScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
                           'images/viewattendance.png',
-                          height: 103.0,
-                          width: 104.0,
+                          height: 90.0,
+                          width: 89.0,
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 5,
                       ),
-                      Text(
-                        'View Attendance',
-                        style: TextStyle(
-                          fontFamily: 'Cardo',
-                          fontSize: 27.0,
-                          color: Colors.white,
-                        ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'View',
+                            style: TextStyle(
+                              fontFamily: 'Cardo',
+                              fontSize: 27.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Attendance',
+                            style: TextStyle(
+                              fontFamily: 'Cardo',
+                              fontSize: 27.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
