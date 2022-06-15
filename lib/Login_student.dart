@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'teachers_screen_3.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginStudent extends StatelessWidget {
+  const LoginStudent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
