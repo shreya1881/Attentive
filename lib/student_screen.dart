@@ -24,7 +24,7 @@ class Teacher_screen extends StatelessWidget {
                     builder: (BuildContext context) {
                        return IconButton(
                        icon: const Icon(
-                        Icons.menu,
+                        Icons.keyboard_arrow_left,
                         color: Colors.white,
                         size: 38, // Changing Drawer Icon Size
                          ),
