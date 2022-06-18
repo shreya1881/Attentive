@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "502767468193",
+    "project_id": "attentive-fca14",
+    "storage_bucket": "attentive-fca14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502767468193:android:ad953cbbfe2e44dd507ae0",
+        "android_client_info": {
+          "package_name": "com.example.attentive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502767468193-rv95s758vk5m4mjdmp13dbnsgc80c9kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUIUZc3LoXt3XqzoZ5RF2F6D22hPfPfR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502767468193-rv95s758vk5m4mjdmp13dbnsgc80c9kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
