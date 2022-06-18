@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'teachers_screen_3.dart';
+import 'student_screen.dart';
 
 class LoginStudent extends StatelessWidget {
   const LoginStudent({Key? key}) : super(key: key);
@@ -250,7 +251,7 @@ class _SigninState extends State<Signin> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Teacher_screen()));
+                          builder: (context) => Student_screen()));
                 });
               },
               child: Text(
