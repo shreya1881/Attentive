@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'view_att.dart';
 
 class Teacher_screen extends StatelessWidget {
   const Teacher_screen({Key? key}) : super(key: key);
@@ -174,7 +175,10 @@ class TeachersScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => viewatt()));
+                },
               ),
             ),
           ),

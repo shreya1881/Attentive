@@ -1,3 +1,4 @@
+import 'package:attentive/view_att.dart';
 import 'package:flutter/material.dart';
 
 class Student_screen extends StatelessWidget {
@@ -121,7 +122,10 @@ class Studentsscreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => viewatt()));
+                },
               ),
             ),
           ),

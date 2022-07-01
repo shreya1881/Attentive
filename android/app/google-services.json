@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965293648534",
+    "project_id": "attentive-26b2e",
+    "storage_bucket": "attentive-26b2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965293648534:android:f1fca8f7e3fa7c006bb0b7",
+        "android_client_info": {
+          "package_name": "com.Shreya.attentive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965293648534-b7bc8tlun0orvfem5defmn1o6cr6gp4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5GScjvBedQZIYiG--tM2GNkZ5SnmfJwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965293648534-b7bc8tlun0orvfem5defmn1o6cr6gp4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
