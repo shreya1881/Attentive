@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'teachers_screen_3.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -64,8 +65,11 @@ class Signin extends StatefulWidget {
 }
 
 class _SigninState extends State<Signin> {
+  final _auth = FirebaseAuth.instance;
   bool hidePassword = true;
   bool value = false;
+  late String email;
+  late String password;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -129,6 +133,9 @@ class _SigninState extends State<Signin> {
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                   child: TextField(
+                    onChanged: (value) {
+                      email = value;
+                    },
                     decoration: InputDecoration(
                       hintText: 'Enter Your Username',
                       alignLabelWithHint: true,
@@ -163,6 +170,9 @@ class _SigninState extends State<Signin> {
               color: Colors.white,
             ),
             child: TextFormField(
+              onChanged: (value) {
+                password = value;
+              },
               obscureText: hidePassword,
               decoration: InputDecoration(
                 hintText: 'Enter Your Password',
@@ -245,13 +255,19 @@ class _SigninState extends State<Signin> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
               ),
-              onPressed: () {
-                setState(() {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Teacher_screen()));
-                });
+              onPressed: () async {
+                try {
+                  final newuser = await _auth.createUserWithEmailAndPassword(
+                      email: email, password: password);
+                  if (newuser != null) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Teacher_screen()));
+                  }
+                } catch (e) {
+                  print(e);
+                }
               },
               child: Text(
                 'Login',

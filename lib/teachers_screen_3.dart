@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view_att.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Teacher_screen extends StatelessWidget {
   const Teacher_screen({Key? key}) : super(key: key);
