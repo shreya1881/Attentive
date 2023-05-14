@@ -1,6 +1,6 @@
 # attentive
 
-A new Flutter project.
+A new Flutter project. Attendance and Library management system
 
 ## Getting Started
 
